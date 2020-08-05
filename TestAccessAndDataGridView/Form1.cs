@@ -46,8 +46,8 @@ namespace WindowsFormsApp1
                 adress = "";
             //String sql = "select * from shop";
             String sql = $"select * from shop where (`name`='{name}' or '{name}'='')" +
-                $"and (`prince`={prince} or '{prince}'='0') " +
-                $"and (`date`={date} or '{date}'='2000-01-01') " +
+                $"and (`prince`={prince} or '{prince}'='0') " +         //{prince}不能加单引号，例如(`prince`='{prince}' or '{prince}'='0')
+                $"and (`date`={date} or '{date}'='2000-01-01') " +      //{date}不能加单引号，例如(`date`='{date}' or '{date}'='2000-01-01')
                 $"and (`adress`='{adress}' or '{adress}'='');";
 
             Console.WriteLine(sql);
