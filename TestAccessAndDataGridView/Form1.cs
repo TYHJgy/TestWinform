@@ -41,7 +41,10 @@ namespace WindowsFormsApp1
             else
                 prince = "-1";
             if (dateCheck.Checked)
-                date = dateTimePicker1.CustomFormat;
+            {
+                dateTimePicker1.CustomFormat = "yyyy-MM-dd";
+                date = dateTimePicker1.Value.ToString();
+            }
             else
                 date = "2000-01-01";
             if (adressCheck.Checked)
@@ -54,7 +57,7 @@ namespace WindowsFormsApp1
                 $"and (`date`={date} or '{date}'='2000-01-01') " +          //{date}不能加单引号，例如(`date`='{date}' or '{date}'='2000-01-01')
                 $"and (`adress`='{adress}' or '{adress}'='');";
 
-            Console.WriteLine(sql);
+            Console.WriteLine("sql语句:"+sql);
             cmd.CommandText = sql;
             conn.Open();
             OleDbDataReader dr = cmd.ExecuteReader();

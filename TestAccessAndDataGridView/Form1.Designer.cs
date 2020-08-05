@@ -151,10 +151,12 @@
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(314, 22);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
             this.dateTimePicker1.TabIndex = 7;
+            this.dateTimePicker1.Value = new System.DateTime(2020, 8, 5, 18, 34, 18, 0);
             // 
             // textBox1
             // 
