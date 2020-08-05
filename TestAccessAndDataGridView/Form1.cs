@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,20 +15,22 @@ using System.Windows.Forms;
 //注释：     先ctrl+k，然后ctrl+c
 //取消注释： 先ctrl+k，然后ctrl+u
 
-
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
+        private string strCon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=shop.accdb";
+        //private string strCon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\02Development\winform\TestWinform\shop.accdb";
         public Form1()
         {
             InitializeComponent();
+            Console.WriteLine("exe文件路径:"+Process.GetCurrentProcess().MainModule.FileName);
+            Console.WriteLine("项目路径:" + Directory.GetCurrentDirectory());
         }
-
         private void btnSelect_Click(object sender, EventArgs e)
         {
             string name,prince,date,adress;
-            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\02Development\winform\TestWinform\shop.accdb"); //Jet OLEDB:Database Password=
+            OleDbConnection conn = new OleDbConnection(strCon); //Jet OLEDB:Database Password=
             OleDbCommand cmd = conn.CreateCommand();
             if (nameCheck.Checked)
                 name = comboBox1.Text;
@@ -35,7 +39,7 @@ namespace WindowsFormsApp1
             if (princeCheck.Checked)          
                 prince = numericUpDown1.Value.ToString();          
             else
-                prince = "0";
+                prince = "-1";
             if (dateCheck.Checked)
                 date = dateTimePicker1.CustomFormat;
             else
@@ -46,8 +50,8 @@ namespace WindowsFormsApp1
                 adress = "";
             //String sql = "select * from shop";
             String sql = $"select * from shop where (`name`='{name}' or '{name}'='')" +
-                $"and (`prince`={prince} or '{prince}'='0') " +         //{prince}不能加单引号，例如(`prince`='{prince}' or '{prince}'='0')
-                $"and (`date`={date} or '{date}'='2000-01-01') " +      //{date}不能加单引号，例如(`date`='{date}' or '{date}'='2000-01-01')
+                $"and (`prince`={prince} or '{prince}'='-1') " +            //{prince}不能加单引号，例如(`prince`='{prince}' or '{prince}'='0')
+                $"and (`date`={date} or '{date}'='2000-01-01') " +          //{date}不能加单引号，例如(`date`='{date}' or '{date}'='2000-01-01')
                 $"and (`adress`='{adress}' or '{adress}'='');";
 
             Console.WriteLine(sql);
@@ -79,30 +83,45 @@ namespace WindowsFormsApp1
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\02Development\winform\TestWinform\shop.accdb"); //Jet OLEDB:Database Password=
-            OleDbCommand cmd = conn.CreateCommand();
+            OleDbConnection conn = new OleDbConnection(strCon); //Jet OLEDB:Database Password=
+            OleDbCommand cmd; 
             conn.Open();
+            
+            cmd = conn.CreateCommand();
             cmd.CommandText = "INSERT INTO shop (`name`,`prince`,`date`,`adress`) VALUES ('mz1','21','2018-09-01','成都市青羊区');";
             cmd.ExecuteReader();
-            //cmd.CommandText = "INSERT INTO shop (`name`,`prince`,`date`,`adress`) VALUES ('mz2','22','2018-09-02','成都市青羊区');";
-            //cmd.ExecuteReader();
-            //cmd.CommandText = "INSERT INTO shop (`name`,`prince`,`date`,`adress`) VALUES ('mz3','23','2018-09-03','成都市青羊区');";
-            //cmd.ExecuteReader();
-            //cmd.CommandText = "INSERT INTO shop (`name`,`prince`,`date`,`adress`) VALUES ('mz4','24','2018-09-04','成都市青羊区');";
-            //cmd.ExecuteReader();
-            //cmd.CommandText = "INSERT INTO shop (`name`,`prince`,`date`,`adress`) VALUES ('mz5','25','2018-09-05','成都市青羊区');";
-            //cmd.ExecuteReader();
             cmd.Dispose();
+
+            cmd = conn.CreateCommand();
+            cmd.CommandText = "INSERT INTO shop (`name`,`prince`,`date`,`adress`) VALUES ('mz2','22','2018-09-02','成都市青羊区');";
+            cmd.ExecuteReader();
+            cmd.Dispose();
+
+            cmd = conn.CreateCommand();
+            cmd.CommandText = "INSERT INTO shop (`name`,`prince`,`date`,`adress`) VALUES ('mz3','23','2018-09-03','成都市青羊区');";
+            cmd.ExecuteReader();
+            cmd.Dispose();
+
+            cmd = conn.CreateCommand();
+            cmd.CommandText = "INSERT INTO shop (`name`,`prince`,`date`,`adress`) VALUES ('mz4','24','2018-09-04','成都市青羊区');";
+            cmd.ExecuteReader();
+            cmd.Dispose();
+
+            cmd = conn.CreateCommand();
+            cmd.CommandText = "INSERT INTO shop (`name`,`prince`,`date`,`adress`) VALUES ('mz5','25','2018-09-05','成都市青羊区');";
+            cmd.ExecuteReader();
+            cmd.Dispose();
+
             conn.Close();
             btnSelect_Click(null, null);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\02Development\winform\TestWinform\shop.accdb"); //Jet OLEDB:Database Password=
+            OleDbConnection conn = new OleDbConnection(strCon); //Jet OLEDB:Database Password=
             OleDbCommand cmd = conn.CreateCommand();
             conn.Open();
-            cmd.CommandText = "DELETE FROM `shop` WHERE `name`='bg';";
+            cmd.CommandText = "DELETE FROM `shop` WHERE `adress`='成都市青羊区';";
             cmd.ExecuteReader();
             cmd.Dispose();
             conn.Close();
@@ -112,7 +131,7 @@ namespace WindowsFormsApp1
         
         private void butUpdate_Click(object sender, EventArgs e)
         {
-            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\02Development\winform\TestWinform\shop.accdb"); //Jet OLEDB:Database Password=
+            OleDbConnection conn = new OleDbConnection(strCon); //Jet OLEDB:Database Password=
             OleDbCommand cmd = conn.CreateCommand();
             conn.Open();
             cmd.CommandText = "UPDATE `shop` SET `name`='gy' WHERE  `name`='bg';";

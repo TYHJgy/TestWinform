@@ -8,3 +8,4 @@ E:\02Development\winform\TestWinform\TestAccessAndDataGridView\obj\Debug\TestAcc
 E:\02Development\winform\TestWinform\TestAccessAndDataGridView\obj\Debug\TestAccessAndDataGridView.csproj.CoreCompileInputs.cache
 E:\02Development\winform\TestWinform\TestAccessAndDataGridView\obj\Debug\WindowsFormsApp1.exe
 E:\02Development\winform\TestWinform\TestAccessAndDataGridView\obj\Debug\WindowsFormsApp1.pdb
+E:\02Development\winform\TestWinform\TestAccessAndDataGridView\obj\Debug\WindowsFormsApp1.LoginForm.resources
