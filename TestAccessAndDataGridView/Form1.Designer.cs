@@ -29,161 +29,189 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSelect = new System.Windows.Forms.Button();
+            this.btnInsert = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.butUpdate = new System.Windows.Forms.Button();
+            this.nameCheck = new System.Windows.Forms.CheckBox();
+            this.princeCheck = new System.Windows.Forms.CheckBox();
+            this.dateCheck = new System.Windows.Forms.CheckBox();
+            this.adressCheck = new System.Windows.Forms.CheckBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7,
-            this.Column8,
-            this.Column9,
-            this.Column10,
-            this.Column11,
-            this.Column12,
-            this.Column13,
-            this.Column14});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 157);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 114);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(800, 293);
+            this.dataGridView1.Size = new System.Drawing.Size(800, 336);
             this.dataGridView1.TabIndex = 0;
             // 
-            // button1
+            // btnSelect
             // 
-            this.button1.Location = new System.Drawing.Point(327, 81);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSelect.Location = new System.Drawing.Point(698, 67);
+            this.btnSelect.Name = "btnSelect";
+            this.btnSelect.Size = new System.Drawing.Size(75, 23);
+            this.btnSelect.TabIndex = 1;
+            this.btnSelect.Text = "查";
+            this.btnSelect.UseVisualStyleBackColor = true;
+            this.btnSelect.Click += new System.EventHandler(this.btnSelect_Click);
             // 
-            // Column1
+            // btnInsert
             // 
-            this.Column1.HeaderText = "Column1";
-            this.Column1.Name = "Column1";
+            this.btnInsert.Location = new System.Drawing.Point(605, 21);
+            this.btnInsert.Name = "btnInsert";
+            this.btnInsert.Size = new System.Drawing.Size(75, 23);
+            this.btnInsert.TabIndex = 2;
+            this.btnInsert.Text = "增";
+            this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
-            // Column2
+            // btnDelete
             // 
-            this.Column2.HeaderText = "Column2";
-            this.Column2.Name = "Column2";
+            this.btnDelete.Location = new System.Drawing.Point(698, 21);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "删";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
-            // Column3
+            // butUpdate
             // 
-            this.Column3.HeaderText = "Column3";
-            this.Column3.Name = "Column3";
+            this.butUpdate.Location = new System.Drawing.Point(605, 67);
+            this.butUpdate.Name = "butUpdate";
+            this.butUpdate.Size = new System.Drawing.Size(75, 23);
+            this.butUpdate.TabIndex = 2;
+            this.butUpdate.Text = "改";
+            this.butUpdate.UseVisualStyleBackColor = true;
+            this.butUpdate.Click += new System.EventHandler(this.butUpdate_Click);
             // 
-            // Column4
+            // nameCheck
             // 
-            this.Column4.HeaderText = "Column4";
-            this.Column4.Name = "Column4";
+            this.nameCheck.AutoSize = true;
+            this.nameCheck.Location = new System.Drawing.Point(13, 24);
+            this.nameCheck.Name = "nameCheck";
+            this.nameCheck.Size = new System.Drawing.Size(48, 16);
+            this.nameCheck.TabIndex = 3;
+            this.nameCheck.Text = "name";
+            this.nameCheck.UseVisualStyleBackColor = true;
             // 
-            // Column5
+            // princeCheck
             // 
-            this.Column5.HeaderText = "Column5";
-            this.Column5.Name = "Column5";
+            this.princeCheck.AutoSize = true;
+            this.princeCheck.Location = new System.Drawing.Point(12, 70);
+            this.princeCheck.Name = "princeCheck";
+            this.princeCheck.Size = new System.Drawing.Size(60, 16);
+            this.princeCheck.TabIndex = 3;
+            this.princeCheck.Text = "prince";
+            this.princeCheck.UseVisualStyleBackColor = true;
             // 
-            // Column6
+            // dateCheck
             // 
-            this.Column6.HeaderText = "Column6";
-            this.Column6.Name = "Column6";
+            this.dateCheck.AutoSize = true;
+            this.dateCheck.Location = new System.Drawing.Point(243, 24);
+            this.dateCheck.Name = "dateCheck";
+            this.dateCheck.Size = new System.Drawing.Size(48, 16);
+            this.dateCheck.TabIndex = 4;
+            this.dateCheck.Text = "date";
+            this.dateCheck.UseVisualStyleBackColor = true;
             // 
-            // Column7
+            // adressCheck
             // 
-            this.Column7.HeaderText = "Column7";
-            this.Column7.Name = "Column7";
+            this.adressCheck.AutoSize = true;
+            this.adressCheck.Location = new System.Drawing.Point(243, 70);
+            this.adressCheck.Name = "adressCheck";
+            this.adressCheck.Size = new System.Drawing.Size(60, 16);
+            this.adressCheck.TabIndex = 5;
+            this.adressCheck.Text = "adress";
+            this.adressCheck.UseVisualStyleBackColor = true;
             // 
-            // Column8
+            // comboBox1
             // 
-            this.Column8.HeaderText = "Column8";
-            this.Column8.Name = "Column8";
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "mz1",
+            "mz2",
+            "mz3",
+            "mz4",
+            "mz5"});
+            this.comboBox1.Location = new System.Drawing.Point(78, 22);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 20);
+            this.comboBox1.TabIndex = 6;
             // 
-            // Column9
+            // dateTimePicker1
             // 
-            this.Column9.HeaderText = "Column9";
-            this.Column9.Name = "Column9";
+            this.dateTimePicker1.Location = new System.Drawing.Point(314, 22);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 21);
+            this.dateTimePicker1.TabIndex = 7;
             // 
-            // Column10
+            // textBox1
             // 
-            this.Column10.HeaderText = "Column10";
-            this.Column10.Name = "Column10";
+            this.textBox1.Location = new System.Drawing.Point(314, 68);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(200, 21);
+            this.textBox1.TabIndex = 8;
             // 
-            // Column11
+            // numericUpDown1
             // 
-            this.Column11.HeaderText = "Column11";
-            this.Column11.Name = "Column11";
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "Column12";
-            this.Column12.Name = "Column12";
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "Column13";
-            this.Column13.Name = "Column13";
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "Column14";
-            this.Column14.Name = "Column14";
+            this.numericUpDown1.Location = new System.Drawing.Point(78, 68);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(120, 21);
+            this.numericUpDown1.TabIndex = 9;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.adressCheck);
+            this.Controls.Add(this.dateCheck);
+            this.Controls.Add(this.princeCheck);
+            this.Controls.Add(this.nameCheck);
+            this.Controls.Add(this.butUpdate);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnInsert);
+            this.Controls.Add(this.btnSelect);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Form1";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
+        private System.Windows.Forms.Button btnSelect;
+        private System.Windows.Forms.Button btnInsert;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button butUpdate;
+        private System.Windows.Forms.CheckBox nameCheck;
+        private System.Windows.Forms.CheckBox princeCheck;
+        private System.Windows.Forms.CheckBox dateCheck;
+        private System.Windows.Forms.CheckBox adressCheck;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.NumericUpDown numericUpDown1;
     }
 }
 

@@ -23,12 +23,35 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnSelect_Click(object sender, EventArgs e)
         {
-            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\02Development\winform\WindowsFormsApp1\shop.accdb"); //Jet OLEDB:Database Password=
+            string name,prince,date,adress;
+            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\02Development\winform\TestWinform\shop.accdb"); //Jet OLEDB:Database Password=
             OleDbCommand cmd = conn.CreateCommand();
+            if (nameCheck.Checked)
+                name = comboBox1.Text;
+            else
+                name = "";
+            if (princeCheck.Checked)          
+                prince = numericUpDown1.Value.ToString();          
+            else
+                prince = "0";
+            if (dateCheck.Checked)
+                date = dateTimePicker1.CustomFormat;
+            else
+                date = "2000-01-01";
+            if (adressCheck.Checked)
+                adress = textBox1.Text;
+            else
+                adress = "";
+            //String sql = "select * from shop";
+            String sql = $"select * from shop where (`name`='{name}' or '{name}'='')" +
+                $"and (`prince`={prince} or '{prince}'='0') " +
+                $"and (`date`={date} or '{date}'='2000-01-01') " +
+                $"and (`adress`='{adress}' or '{adress}'='');";
 
-            cmd.CommandText = "select * from shop,student";
+            Console.WriteLine(sql);
+            cmd.CommandText = sql;
             conn.Open();
             OleDbDataReader dr = cmd.ExecuteReader();
             DataTable dt = new DataTable();
@@ -52,6 +75,51 @@ namespace WindowsFormsApp1
             cmd.Dispose();
             conn.Close();
             dataGridView1.DataSource = dt;
+        }
+
+        private void btnInsert_Click(object sender, EventArgs e)
+        {
+            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\02Development\winform\TestWinform\shop.accdb"); //Jet OLEDB:Database Password=
+            OleDbCommand cmd = conn.CreateCommand();
+            conn.Open();
+            cmd.CommandText = "INSERT INTO shop (`name`,`prince`,`date`,`adress`) VALUES ('mz1','21','2018-09-01','成都市青羊区');";
+            cmd.ExecuteReader();
+            //cmd.CommandText = "INSERT INTO shop (`name`,`prince`,`date`,`adress`) VALUES ('mz2','22','2018-09-02','成都市青羊区');";
+            //cmd.ExecuteReader();
+            //cmd.CommandText = "INSERT INTO shop (`name`,`prince`,`date`,`adress`) VALUES ('mz3','23','2018-09-03','成都市青羊区');";
+            //cmd.ExecuteReader();
+            //cmd.CommandText = "INSERT INTO shop (`name`,`prince`,`date`,`adress`) VALUES ('mz4','24','2018-09-04','成都市青羊区');";
+            //cmd.ExecuteReader();
+            //cmd.CommandText = "INSERT INTO shop (`name`,`prince`,`date`,`adress`) VALUES ('mz5','25','2018-09-05','成都市青羊区');";
+            //cmd.ExecuteReader();
+            cmd.Dispose();
+            conn.Close();
+            btnSelect_Click(null, null);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\02Development\winform\TestWinform\shop.accdb"); //Jet OLEDB:Database Password=
+            OleDbCommand cmd = conn.CreateCommand();
+            conn.Open();
+            cmd.CommandText = "DELETE FROM `shop` WHERE `name`='bg';";
+            cmd.ExecuteReader();
+            cmd.Dispose();
+            conn.Close();
+            btnSelect_Click(null, null);
+        }
+
+        
+        private void butUpdate_Click(object sender, EventArgs e)
+        {
+            OleDbConnection conn = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\02Development\winform\TestWinform\shop.accdb"); //Jet OLEDB:Database Password=
+            OleDbCommand cmd = conn.CreateCommand();
+            conn.Open();
+            cmd.CommandText = "UPDATE `shop` SET `name`='gy' WHERE  `name`='bg';";
+            cmd.ExecuteReader();
+            cmd.Dispose();
+            conn.Close();
+            btnSelect_Click(null, null);
         }
     }
 }
