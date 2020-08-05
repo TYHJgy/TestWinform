@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAccessAndDataGridView", "TestAccessAndDataGridView\TestAccessAndDataGridView.csproj", "{6DA516A7-5F20-454F-94E9-742280B8E9D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFileIO", "TestFileIO\TestFileIO.csproj", "{6E079471-F8A1-439C-9ACC-B606F1744196}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6DA516A7-5F20-454F-94E9-742280B8E9D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DA516A7-5F20-454F-94E9-742280B8E9D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DA516A7-5F20-454F-94E9-742280B8E9D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DA516A7-5F20-454F-94E9-742280B8E9D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E079471-F8A1-439C-9ACC-B606F1744196}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E079471-F8A1-439C-9ACC-B606F1744196}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E079471-F8A1-439C-9ACC-B606F1744196}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E079471-F8A1-439C-9ACC-B606F1744196}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B56A0EB0-7E8C-44B4-8877-E22854BE0FD2}
+	EndGlobalSection
+EndGlobal
