@@ -50,5 +50,10 @@ namespace TestDBF
             dataGridView1.DataSource = dt;
             dataGridView1.DataSource = dt;
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
