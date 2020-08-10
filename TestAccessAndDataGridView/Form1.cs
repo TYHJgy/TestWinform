@@ -15,7 +15,7 @@ namespace WindowsFormsApp1
     public partial class Form1 : Form
     {
         //private string strCon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=shop.accdb";
-        private string strCon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\02Development\winform\TestWinform\shop.accdb";
+        private string strCon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\02Development\winform\TestWinform\shop2.accdb;Jet OLEDB:Database Password=123456;";
         public Form1()
         {
             InitializeComponent();
@@ -351,6 +351,11 @@ namespace WindowsFormsApp1
         {
             OutputAsExcelFile(dataGridView1);
             //ToExcel(dataGridView1);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

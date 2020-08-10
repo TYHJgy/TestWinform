@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,7 +27,7 @@ namespace TestFileIO
             if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 textBox.Text = dialog.FileName;
-                // do something           
+                
             }
         }
 
@@ -41,9 +42,14 @@ namespace TestFileIO
                     MessageBox.Show("文件夹路径不能为空", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
                     return;
                 }
-                textBox.Text = dialog.SelectedPath + "\\";
+                textBox1.Text = dialog.SelectedPath;
                 //do something
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            File.Copy(textBox.Text, textBox1.Text + "\\shop2.accdb");
         }
     }
 }

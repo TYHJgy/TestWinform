@@ -1,0 +1,10 @@
+E:\02Development\winform\TestWinform\TestDBF\bin\Debug\TestDBF.exe.config
+E:\02Development\winform\TestWinform\TestDBF\bin\Debug\TestDBF.exe
+E:\02Development\winform\TestWinform\TestDBF\bin\Debug\TestDBF.pdb
+E:\02Development\winform\TestWinform\TestDBF\obj\Debug\TestDBF.csprojAssemblyReference.cache
+E:\02Development\winform\TestWinform\TestDBF\obj\Debug\TestDBF.Form1.resources
+E:\02Development\winform\TestWinform\TestDBF\obj\Debug\TestDBF.Properties.Resources.resources
+E:\02Development\winform\TestWinform\TestDBF\obj\Debug\TestDBF.csproj.GenerateResource.cache
+E:\02Development\winform\TestWinform\TestDBF\obj\Debug\TestDBF.csproj.CoreCompileInputs.cache
+E:\02Development\winform\TestWinform\TestDBF\obj\Debug\TestDBF.exe
+E:\02Development\winform\TestWinform\TestDBF\obj\Debug\TestDBF.pdb
