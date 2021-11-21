@@ -1,0 +1,16 @@
+.git/
+.vs/
+ALLDemo/bin/
+ALLDemo/obj/
+
+TestAccessAndDataGridView/bin/
+TestAccessAndDataGridView/obj/
+
+TestChart/bin/
+TestChart/obj/
+
+TestDBF/bin/
+TestDBF/obj/
+
+TestFileIO/bin/
+TestFileIO/obj/

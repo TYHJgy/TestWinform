@@ -20,7 +20,7 @@ namespace TestDBF
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string strCon = @"Provider=vfpoledb;Data Source=E:\02Development\winform\TestWinform;Collating Sequence=machine;";             
+            string strCon = @"Provider=vfpoledb;Data Source=D:\study\workspace\winform\TestWinform;Collating Sequence=machine;";             
             OleDbConnection conn = new OleDbConnection(strCon); //Jet OLEDB:Database Password=
             OleDbCommand cmd = conn.CreateCommand();
             string sql = "select * from dbfTest.dbf";
