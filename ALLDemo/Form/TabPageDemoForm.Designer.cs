@@ -75,12 +75,13 @@
             // 
             // circleButton1
             // 
+            this.circleButton1.BackColor = System.Drawing.Color.Red;
             this.circleButton1.Location = new System.Drawing.Point(426, 215);
             this.circleButton1.Name = "circleButton1";
             this.circleButton1.Size = new System.Drawing.Size(76, 70);
             this.circleButton1.TabIndex = 0;
-            this.circleButton1.Text = "circleButton1";
-            this.circleButton1.UseVisualStyleBackColor = true;
+            this.circleButton1.Text = "0";
+            this.circleButton1.UseVisualStyleBackColor = false;
             // 
             // TabPageDemoForm
             // 

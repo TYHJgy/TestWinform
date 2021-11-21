@@ -9,13 +9,17 @@ using Excel = Microsoft.Office.Interop.Excel;
 
 //注释：     先ctrl+k，然后ctrl+c
 //取消注释： 先ctrl+k，然后ctrl+u
+/* 
+ .NET版本必须使用.NETFramework,Version=v4.0,Profile=Client，否则会报错：未在本地计算机上注册“microsoft.ACE.oledb.12.0”提供程序
+*/
 
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
         //private string strCon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=shop.accdb";
-        private string strCon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=E:\02Development\winform\TestWinform\shop2.accdb;Jet OLEDB:Database Password=123456;";
+        private string strCon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\study\workspace\winform\TestWinform\shop.accdb;Jet OLEDB:Database Password=123456;";
+        //private string strCon = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\study\workspace\winform\TestWinform\TestAccessAndDataGridView\LMS2.mdb;Jet OLEDB:Database Password=abc123;";
         public Form1()
         {
             InitializeComponent();
