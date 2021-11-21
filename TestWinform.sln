@@ -15,8 +15,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ALLDemo", "ALLDemo\ALLDemo.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CD14ACD5-1EFD-4193-9196-FA9F514FB2B5}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		README.md = README.md
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MysqlOperation", "MysqlOperation\MysqlOperation.csproj", "{A72E22DE-F8CE-4F6D-9343-2955D561BC5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -44,6 +47,10 @@ Global
 		{4623C937-B145-42A6-8087-CCB5A3483973}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4623C937-B145-42A6-8087-CCB5A3483973}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4623C937-B145-42A6-8087-CCB5A3483973}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A72E22DE-F8CE-4F6D-9343-2955D561BC5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A72E22DE-F8CE-4F6D-9343-2955D561BC5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A72E22DE-F8CE-4F6D-9343-2955D561BC5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A72E22DE-F8CE-4F6D-9343-2955D561BC5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
