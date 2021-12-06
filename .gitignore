@@ -2,6 +2,7 @@
 .vs/
 ALLDemo/bin/
 ALLDemo/obj/
+packages/
 
 TestAccessAndDataGridView/bin/
 TestAccessAndDataGridView/obj/
