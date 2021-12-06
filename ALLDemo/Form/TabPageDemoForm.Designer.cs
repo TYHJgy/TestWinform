@@ -31,7 +31,10 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.shapeButton2 = new ALLDemo.CustomControl.ShapeButton();
             this.circleButton1 = new ALLDemo.CircleButton();
+            this.shapeButton1 = new ALLDemo.CustomControl.ShapeButton();
+            this.shapeButton3 = new ALLDemo.CustomControl.ShapeButton();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -54,6 +57,9 @@
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.shapeButton3);
+            this.tabPage1.Controls.Add(this.shapeButton1);
+            this.tabPage1.Controls.Add(this.shapeButton2);
             this.tabPage1.Controls.Add(this.circleButton1);
             this.tabPage1.Location = new System.Drawing.Point(104, 4);
             this.tabPage1.Name = "tabPage1";
@@ -73,15 +79,81 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // shapeButton2
+            // 
+            this.shapeButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.shapeButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.shapeButton2.CustomClickColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.shapeButton2.CustomClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.shapeButton2.CustomDefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.shapeButton2.CustomDefaultTextColor = System.Drawing.Color.Cyan;
+            this.shapeButton2.CustomDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.shapeButton2.CustomDisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.shapeButton2.Fillet = 20;
+            this.shapeButton2.FlatAppearance.BorderSize = 0;
+            this.shapeButton2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.shapeButton2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.shapeButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.shapeButton2.Location = new System.Drawing.Point(393, 48);
+            this.shapeButton2.Name = "shapeButton2";
+            this.shapeButton2.Size = new System.Drawing.Size(97, 58);
+            this.shapeButton2.TabIndex = 2;
+            this.shapeButton2.Text = "shapeButton2";
+            this.shapeButton2.UseVisualStyleBackColor = false;
+            // 
             // circleButton1
             // 
             this.circleButton1.BackColor = System.Drawing.Color.Red;
-            this.circleButton1.Location = new System.Drawing.Point(426, 215);
+            this.circleButton1.Location = new System.Drawing.Point(255, 250);
             this.circleButton1.Name = "circleButton1";
-            this.circleButton1.Size = new System.Drawing.Size(76, 70);
+            this.circleButton1.Size = new System.Drawing.Size(75, 70);
             this.circleButton1.TabIndex = 0;
             this.circleButton1.Text = "0";
             this.circleButton1.UseVisualStyleBackColor = false;
+            // 
+            // shapeButton1
+            // 
+            this.shapeButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.shapeButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.shapeButton1.CustomClickColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.shapeButton1.CustomClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.shapeButton1.CustomDefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.shapeButton1.CustomDefaultTextColor = System.Drawing.Color.Cyan;
+            this.shapeButton1.CustomDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.shapeButton1.CustomDisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.shapeButton1.Fillet = 60;
+            this.shapeButton1.FlatAppearance.BorderSize = 0;
+            this.shapeButton1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.shapeButton1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.shapeButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.shapeButton1.Location = new System.Drawing.Point(393, 220);
+            this.shapeButton1.Name = "shapeButton1";
+            this.shapeButton1.Size = new System.Drawing.Size(97, 58);
+            this.shapeButton1.TabIndex = 2;
+            this.shapeButton1.Text = "shapeButton2";
+            this.shapeButton1.UseVisualStyleBackColor = false;
+            // 
+            // shapeButton3
+            // 
+            this.shapeButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.shapeButton3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.shapeButton3.CustomClickColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.shapeButton3.CustomClickTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.shapeButton3.CustomDefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.shapeButton3.CustomDefaultTextColor = System.Drawing.Color.Cyan;
+            this.shapeButton3.CustomDisabledColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.shapeButton3.CustomDisabledTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.shapeButton3.Fillet = 40;
+            this.shapeButton3.FlatAppearance.BorderSize = 0;
+            this.shapeButton3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.shapeButton3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.shapeButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.shapeButton3.Location = new System.Drawing.Point(393, 137);
+            this.shapeButton3.Name = "shapeButton3";
+            this.shapeButton3.Size = new System.Drawing.Size(97, 58);
+            this.shapeButton3.TabIndex = 2;
+            this.shapeButton3.Text = "shapeButton2";
+            this.shapeButton3.UseVisualStyleBackColor = false;
             // 
             // TabPageDemoForm
             // 
@@ -104,6 +176,9 @@
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
         private CircleButton circleButton1;
+        private CustomControl.ShapeButton shapeButton2;
+        private CustomControl.ShapeButton shapeButton3;
+        private CustomControl.ShapeButton shapeButton1;
     }
 }
 

@@ -52,6 +52,29 @@
     <Compile Include="CustomControl\CircleButton.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="CustomControl\ShapeButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CustomControl\ShapeButton.Designer.cs">
+      <DependentUpon>ShapeButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="db_exampleDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_exampleDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form\DataGridViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\DataGridViewForm.Designer.cs">
+      <DependentUpon>DataGridViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\TabPageDemoForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -60,6 +83,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form\DataGridViewForm.resx">
+      <DependentUpon>DataGridViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -73,6 +102,17 @@
       <DependentUpon>TabPageDemoForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="app.manifest" />
+    <None Include="db_exampleDataSet.xsc">
+      <DependentUpon>db_exampleDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_exampleDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_exampleDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_exampleDataSet.xss">
+      <DependentUpon>db_exampleDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

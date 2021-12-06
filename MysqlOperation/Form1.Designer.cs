@@ -44,9 +44,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(710, 15);
+            this.button1.Location = new System.Drawing.Point(710, 10);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 32);
             this.button1.TabIndex = 0;
             this.button1.Text = "增";
             this.button1.UseVisualStyleBackColor = true;
@@ -54,9 +54,9 @@
             // 
             // select
             // 
-            this.select.Location = new System.Drawing.Point(594, 15);
+            this.select.Location = new System.Drawing.Point(594, 10);
             this.select.Name = "select";
-            this.select.Size = new System.Drawing.Size(75, 23);
+            this.select.Size = new System.Drawing.Size(75, 32);
             this.select.TabIndex = 3;
             this.select.Text = "查";
             this.select.UseVisualStyleBackColor = true;
@@ -66,10 +66,10 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 45);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 48);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 27;
-            this.dataGridView1.Size = new System.Drawing.Size(1156, 639);
+            this.dataGridView1.Size = new System.Drawing.Size(1156, 636);
             this.dataGridView1.TabIndex = 4;
             // 
             // label1
@@ -122,12 +122,13 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(819, 15);
+            this.button2.Location = new System.Drawing.Point(819, 10);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(139, 23);
+            this.button2.Size = new System.Drawing.Size(139, 32);
             this.button2.TabIndex = 0;
             this.button2.Text = "导出excel";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form1
             // 

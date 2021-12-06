@@ -47,12 +47,20 @@ namespace TestChart
             ChartArea chartArea5 = new ChartArea("C5");
             this.chart1.ChartAreas.Add(chartArea5);
 
+            //图表区域样式
+            chartArea1.BackColor = Color.AliceBlue;                      //背景色
+            chartArea1.BackSecondaryColor = Color.White;                 //渐变背景色
+            chartArea1.BackGradientStyle = GradientStyle.TopBottom;      //渐变方式
+            chartArea1.BackHatchStyle = ChartHatchStyle.None;            //背景阴影
+            chartArea1.BorderDashStyle = ChartDashStyle.NotSet;          //边框线样式
+            chartArea1.BorderWidth = 1;                                  //边框宽度
+            chartArea1.BorderColor = Color.Black;
+
             //定义存储和显示点的容器
             this.chart1.Series.Clear();
             Series series1 = new Series("S1");
             series1.ChartArea = "C1";
             this.chart1.Series.Add(series1);
-
 
             Series series2 = new Series("S2");
             series2.ChartArea = "C2";
@@ -70,28 +78,61 @@ namespace TestChart
             series5.ChartArea = "C5";
             this.chart1.Series.Add(series5);
 
-            //设置图表显示样式
+            //设置AxisY样式
+            this.chart1.ChartAreas[0].AxisY.Title = @"Value";
+            this.chart1.ChartAreas[0].AxisY.LabelAutoFitMinFontSize = 5;
+            this.chart1.ChartAreas[0].AxisY.LineWidth = 5;
+            this.chart1.ChartAreas[0].AxisY.Enabled = AxisEnabled.True;
+            this.chart1.ChartAreas[0].AxisY.LineColor = Color.Black;
             this.chart1.ChartAreas[0].AxisY.Minimum = 0;
             this.chart1.ChartAreas[0].AxisY.Maximum = 100;
-            this.chart1.ChartAreas[0].AxisX.Interval = 5;
-            this.chart1.ChartAreas[0].AxisX.MajorGrid.LineColor = System.Drawing.Color.Silver;
-            this.chart1.ChartAreas[0].AxisY.MajorGrid.LineColor = System.Drawing.Color.Silver;
+            this.chart1.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.Silver;
+
+
+            this.chart1.ChartAreas[0].AxisX.Title = @"Time";
+            this.chart1.ChartAreas[0].AxisX.IsLabelAutoFit = true;
+            this.chart1.ChartAreas[0].AxisX.LabelAutoFitMinFontSize = 5;
+            this.chart1.ChartAreas[0].AxisX.LabelStyle.Angle = -15;
+
+
+            this.chart1.ChartAreas[0].AxisX.LabelStyle.IsEndLabelVisible = true;        //show the last label
+            this.chart1.ChartAreas[0].AxisX.IntervalAutoMode = IntervalAutoMode.FixedCount;
+            this.chart1.ChartAreas[0].AxisX.IntervalType = DateTimeIntervalType.NotSet;
+            this.chart1.ChartAreas[0].AxisX.TextOrientation = TextOrientation.Auto;
+            this.chart1.ChartAreas[0].AxisX.LineWidth = 2;
+            this.chart1.ChartAreas[0].AxisX.LineColor = Color.Black;
+            this.chart1.ChartAreas[0].AxisX.Enabled = AxisEnabled.True;
+            this.chart1.ChartAreas[0].AxisX.ScaleView.MinSizeType = DateTimeIntervalType.Months;
+            this.chart1.ChartAreas[0].AxisX.Crossing = 0;
+
+
+            //this.chart1.ChartAreas[0].AxisX.Minimum = 0;
+            this.chart1.ChartAreas[0].AxisX.Maximum = 105;
+            //this.chart1.ChartAreas[0].AxisX.Interval = 5;
+            this.chart1.ChartAreas[0].AxisX.MajorGrid.LineColor = Color.Silver;
+
             //设置标题
             this.chart1.Titles.Clear();
             this.chart1.Titles.Add("S01");
-            this.chart1.Titles[0].Text = "XXX显示";
+            this.chart1.Titles[0].Text = string.Format("XXX {0} 显示", "1");
             this.chart1.Titles[0].ForeColor = Color.RoyalBlue;
-            this.chart1.Titles[0].Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.chart1.Titles[0].Font = new Font("Microsoft Sans Serif", 12F);
+
+            this.chart1.Titles.Add("S02");
+            this.chart1.Titles[1].Text = string.Format("XXX {0} 显示", "2");
+            this.chart1.Titles[1].ForeColor = Color.RoyalBlue;
+            this.chart1.Titles[1].Font = new Font("Microsoft Sans Serif", 12F);
+
             //设置图表显示样式
             this.chart1.Series[0].Color = Color.Red;
-            this.chart1.Titles[0].Text = string.Format("XXX {0} 显示", "000");
-            this.chart1.Series[0].ChartType = SeriesChartType.Line;
             this.chart1.Series[0].Points.Clear();
+            this.chart1.Series[0].ChartType = SeriesChartType.Line;
 
             this.chart1.Series[1].ChartType = SeriesChartType.Area;
             this.chart1.Series[2].ChartType = SeriesChartType.Bar;
             this.chart1.Series[3].ChartType = SeriesChartType.FastLine;
             this.chart1.Series[4].ChartType = SeriesChartType.Radar;
+
         }
 
         /// <summary>

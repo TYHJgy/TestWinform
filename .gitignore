@@ -4,6 +4,9 @@ ALLDemo/bin/
 ALLDemo/obj/
 packages/
 
+MysqlOperation/bin/
+MysqlOperation/obj/
+
 TestAccessAndDataGridView/bin/
 TestAccessAndDataGridView/obj/
 

@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace ALLDemo
 {
+    //自定义圆形button
     public class CircleButton : Button//继承按钮类    重新生成解决方案就能看见我啦
     {
         protected override void OnPaint(PaintEventArgs e)//重新设置控件的形状   protected 保护  override重新

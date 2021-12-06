@@ -16,7 +16,7 @@ namespace ALLDemo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TabPageDemoForm());
+            Application.Run(new MainForm());
         }
     }
 }

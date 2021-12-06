@@ -220,6 +220,7 @@ namespace WindowsFormsApp1
                 DisplayAlerts = false,//不显示更改提示  
                 Visible = true
             };
+            
 
             Excel.Workbooks workbooks = m_xlApp.Workbooks;
             Excel.Workbook workbook = workbooks.Add(Excel.XlWBATemplate.xlWBATWorksheet);

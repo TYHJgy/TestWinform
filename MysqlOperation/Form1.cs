@@ -67,6 +67,7 @@ namespace MysqlOperation
             {
                 Console.WriteLine(reader.GetInt32("_num") + reader.GetString("_name"));//"userid"是数据库对应的列名，推荐这种方式
             }
+            reader.Close();
         }
 
 
@@ -81,13 +82,18 @@ namespace MysqlOperation
         }
         private void select_Click(object sender, EventArgs e)
         {
-            queryMysql();
+            //queryMysql();
             queryMysql2();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             insertData();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
