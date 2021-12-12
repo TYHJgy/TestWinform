@@ -31,6 +31,7 @@
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.DataGridView_Test = new System.Windows.Forms.Button();
             this.TabControl_Test = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -38,6 +39,7 @@
             // 
             this.flowLayoutPanel1.Controls.Add(this.DataGridView_Test);
             this.flowLayoutPanel1.Controls.Add(this.TabControl_Test);
+            this.flowLayoutPanel1.Controls.Add(this.button1);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -66,6 +68,16 @@
             this.TabControl_Test.UseVisualStyleBackColor = true;
             this.TabControl_Test.Click += new System.EventHandler(this.TabControl_Test_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(321, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(129, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Serial_test";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -85,5 +97,6 @@
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Button DataGridView_Test;
         private System.Windows.Forms.Button TabControl_Test;
+        private System.Windows.Forms.Button button1;
     }
 }

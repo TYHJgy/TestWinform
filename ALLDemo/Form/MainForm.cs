@@ -40,5 +40,12 @@ namespace ALLDemo
             form.ShowDialog();
 
         }
+        //串口测试
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SerialTestForm form = new SerialTestForm();
+            form.ShowDialog();
+
+        }
     }
 }
