@@ -47,5 +47,12 @@ namespace ALLDemo
             form.ShowDialog();
 
         }
+
+        //测试socket
+        private void button2_Click(object sender, EventArgs e)
+        {
+            SocketTestForm  form = new SocketTestForm();
+            form.ShowDialog();
+        }
     }
 }
