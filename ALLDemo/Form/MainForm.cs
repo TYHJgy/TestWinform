@@ -54,5 +54,11 @@ namespace ALLDemo
             SocketTestForm  form = new SocketTestForm();
             form.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ChartTestForm form = new ChartTestForm();
+            form.ShowDialog();
+        }
     }
 }
