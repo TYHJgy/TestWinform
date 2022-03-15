@@ -196,6 +196,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "SocketTestForm";
             this.Text = "SocketTestForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.formClosed);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);
