@@ -1,0 +1,10 @@
+D:\study\project\winform\TestWinform\MNsmv\bin\Debug\MNsmv.exe.config
+D:\study\project\winform\TestWinform\MNsmv\bin\Debug\MNsmv.exe
+D:\study\project\winform\TestWinform\MNsmv\bin\Debug\MNsmv.pdb
+D:\study\project\winform\TestWinform\MNsmv\obj\Debug\MNsmv.csprojAssemblyReference.cache
+D:\study\project\winform\TestWinform\MNsmv\obj\Debug\MNsmv.Form1.resources
+D:\study\project\winform\TestWinform\MNsmv\obj\Debug\MNsmv.Properties.Resources.resources
+D:\study\project\winform\TestWinform\MNsmv\obj\Debug\MNsmv.csproj.GenerateResource.cache
+D:\study\project\winform\TestWinform\MNsmv\obj\Debug\MNsmv.csproj.CoreCompileInputs.cache
+D:\study\project\winform\TestWinform\MNsmv\obj\Debug\MNsmv.exe
+D:\study\project\winform\TestWinform\MNsmv\obj\Debug\MNsmv.pdb

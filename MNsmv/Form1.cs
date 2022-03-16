@@ -11,71 +11,23 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ALLDemo
+namespace MNsmv
 {
-    public partial class SocketTestForm : Form
+    public partial class Form1 : Form
     {
-        //创建用来专门作为监听来电等待工作的线程
         Thread listenThread = null;
         Thread clientThread = null;
         Socket clientSocket = null;
         Socket serverSocket = null;
-        public SocketTestForm()
+
+        public Form1()
         {
             InitializeComponent();
         }
-        //连接socket。监听
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //创建socket
-            serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            //配置地址和端口
-            IPEndPoint ipe = new IPEndPoint(IPAddress.Parse(textBox1.Text),int.Parse(textBox2.Text));
-            //绑定
-            serverSocket.Bind(ipe);
-            //监听
-            serverSocket.Listen(10); //参数为最大监听的用户数
-            //创建线程
-            listenThread = new Thread(ListenConnectSocket);
-            listenThread.IsBackground = true; //关闭后天线程
-            listenThread.Start();
-        }
-        //socket监听线程
-        void ListenConnectSocket()
-        {
-            while (true)
-            {
 
-                this.Invoke(new Action(() =>
-                {
-                    textBox5.Text = "开始监听";
-                }));
-                //监听
-                Socket ClientSocket = serverSocket.Accept();
-                //byte[] buffer = Encoding.Default.GetBytes("成功连接到服务器！");
-                //ClientSocket.Send(buffer);
-                //Thread.Sleep(1000);
-                try
-                {
-                    //发送数据
-                    while (true)
-                    {
-                        byte[] buffer1 = genSMVdata();
-                        //byte[] buffer1 = Encoding.Default.GetBytes("我是服务端循环发送！");
-                        ClientSocket.Send(buffer1);
-                        Thread.Sleep(2000);
-                        Console.WriteLine(ClientSocket);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("出现异常");
-                    //listenThread.Abort(ex.Message);
-                }
-            }
-        }
         //生成SMV模拟数据
-        private byte[] genSMVdata() {
+        private byte[] genSMVdata()
+        {
             Random rd = new Random();
             byte[] buffer1 = new byte[38];
             buffer1[0] = 0xAA;//帧头
@@ -122,13 +74,13 @@ namespace ALLDemo
 
 
             //异或
-            byte temp = (byte)(buffer1[0] ^ buffer1[1]);            
-            for (int i=2;i<buffer1.Length-1;i++)
+            byte temp = (byte)(buffer1[0] ^ buffer1[1]);
+            for (int i = 2; i < buffer1.Length - 1; i++)
             {
                 temp ^= buffer1[i];
             }
 
-            Console.WriteLine("取反前temp:" + Convert.ToString(temp,2).PadLeft(8, '0'));
+            Console.WriteLine("取反前temp:" + Convert.ToString(temp, 2).PadLeft(8, '0'));
             //取反
             temp = (byte)~temp;
             Console.WriteLine("取反后temp:" + Convert.ToString(temp, 2).PadLeft(8, '0'));
@@ -209,89 +161,53 @@ namespace ALLDemo
             buffer1[43] = temp;//校验码
             return buffer1;
         }
-        public void connectSocket() {
-            //创建socket
-            Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            //配置地址和端口
-            IPEndPoint ipe = new IPEndPoint(IPAddress.Parse(textBox3.Text), int.Parse(textBox4.Text));
-            //连接
-            try
-            {
-                s.Connect(ipe);
-                clientSocket = s;
-                //4.接收或发送消息 使用线程来实现
-                clientThread = new Thread(ReceiveMsg);
-                clientThread.IsBackground = true; //开启后台线程
-                clientThread.Start();
-            }
-            catch (ArgumentNullException ae)
-            {
-                Console.WriteLine("ArgumentNullException : {0}", ae.ToString());
-            }
-            catch (SocketException se)
-            {
-                Console.WriteLine("SocketException : {0}", se.ToString());
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Unexpected exception : {0}", e.ToString());
-            }
-        }
-        private void ReceiveMsg()
+
+        //socket监听线程
+        void ListenConnectSocket()
         {
             while (true)
             {
-                byte[] recBuffer = new byte[1024 * 1024 * 2];//声明最大字符内存
-                int length = -1; //字节长度
+
+                this.Invoke(new Action(() =>
+                {
+                    textBox5.Text = "开始监听";
+                }));
+                //监听
+                Socket ClientSocket = serverSocket.Accept();
+
                 try
                 {
-                    length = clientSocket.Receive(recBuffer);//返回接收到的实际的字节数量
-                    //将byte转化为十六进制字符串
-                    Console.WriteLine(string.Format("{0:X2} ", recBuffer[0]));
-                }
-                catch (SocketException ex)
-                {
-                    break;
+                    //发送数据
+                    while (true)
+                    {
+                        byte[] buffer1 = genSMVdata();
+                        ClientSocket.Send(buffer1);
+                        Thread.Sleep(2000);
+                        Console.WriteLine(ClientSocket);
+                    }
                 }
                 catch (Exception ex)
                 {
-                    break;
-                }
-                //接收到消息
-                if (length > 0)
-                {
-                    //按照
-                    string msg = Encoding.Default.GetString(recBuffer, 0, length);//转译字符串(字符串，开始的索引，字符串长度)
-                    string str = $"{DateTime.Now}【接收】{msg}{Environment.NewLine}";//接收的时间，内容，换行
-                    this.Invoke(new Action(() =>
-                    {
-                        textBox6.AppendText(str);//添加到文本
-                    }));
+                    Console.WriteLine("出现异常");
+                    //listenThread.Abort(ex.Message);
                 }
             }
         }
-        private void button2_Click(object sender, EventArgs e)
-        {
-            connectSocket();
-        }
 
-        //关闭窗口时关闭线程
-        private void formClosed(object sender, FormClosedEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (serverSocket != null)
-            {
-                serverSocket.Close();
-            }
-            if (clientThread != null)
-            {
-                clientThread.Abort();
-            }
-            if (listenThread != null)
-            {
-                listenThread.Abort();
-            }
-
-            
+            //创建socket
+            serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            //配置地址和端口
+            IPEndPoint ipe = new IPEndPoint(IPAddress.Parse(textBox1.Text), int.Parse(textBox2.Text));
+            //绑定
+            serverSocket.Bind(ipe);
+            //监听
+            serverSocket.Listen(10); //参数为最大监听的用户数
+            //创建线程
+            listenThread = new Thread(ListenConnectSocket);
+            listenThread.IsBackground = true; //关闭后天线程
+            listenThread.Start();
         }
     }
 }
