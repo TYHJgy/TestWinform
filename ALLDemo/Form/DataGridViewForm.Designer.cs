@@ -83,7 +83,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 300F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 300F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 300F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(940, 540);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1285, 662);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // groupBox2
@@ -92,7 +92,7 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(6, 612);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(453, 294);
+            this.groupBox2.Size = new System.Drawing.Size(626, 294);
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "代码添加数据";
@@ -104,7 +104,7 @@
             this.dataGridView2.Location = new System.Drawing.Point(3, 21);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowTemplate.Height = 27;
-            this.dataGridView2.Size = new System.Drawing.Size(447, 270);
+            this.dataGridView2.Size = new System.Drawing.Size(620, 270);
             this.dataGridView2.TabIndex = 3;
             // 
             // groupBox3
@@ -113,7 +113,7 @@
             this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox3.Location = new System.Drawing.Point(6, 309);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(453, 294);
+            this.groupBox3.Size = new System.Drawing.Size(626, 294);
             this.groupBox3.TabIndex = 11;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "设计时添加数据";
@@ -128,7 +128,7 @@
             this.dataGridView3.Location = new System.Drawing.Point(3, 21);
             this.dataGridView3.Name = "dataGridView3";
             this.dataGridView3.RowTemplate.Height = 27;
-            this.dataGridView3.Size = new System.Drawing.Size(447, 270);
+            this.dataGridView3.Size = new System.Drawing.Size(620, 270);
             this.dataGridView3.TabIndex = 3;
             // 
             // Column1
@@ -147,7 +147,7 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(453, 294);
+            this.groupBox1.Size = new System.Drawing.Size(626, 294);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "绑定数据源";
@@ -165,7 +165,7 @@
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(3, 21);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(447, 270);
+            this.dataGridView1.Size = new System.Drawing.Size(620, 270);
             this.dataGridView1.TabIndex = 2;
             // 
             // numDataGridViewTextBoxColumn
@@ -206,9 +206,9 @@
             // 
             this.groupBox4.Controls.Add(this.button1);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox4.Location = new System.Drawing.Point(468, 309);
+            this.groupBox4.Location = new System.Drawing.Point(641, 309);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(454, 294);
+            this.groupBox4.Size = new System.Drawing.Size(626, 294);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "控制事件";
@@ -230,9 +230,9 @@
             this.groupBox5.Controls.Add(this.textBox1);
             this.groupBox5.Controls.Add(this.button2);
             this.groupBox5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupBox5.Location = new System.Drawing.Point(468, 6);
+            this.groupBox5.Location = new System.Drawing.Point(641, 6);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(454, 294);
+            this.groupBox5.Size = new System.Drawing.Size(626, 294);
             this.groupBox5.TabIndex = 13;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "控制事件";
@@ -261,6 +261,7 @@
             this.button2.TabIndex = 0;
             this.button2.Text = "过滤数据";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // studentTableAdapter
             // 
@@ -270,7 +271,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(940, 540);
+            this.ClientSize = new System.Drawing.Size(1285, 662);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "DataGridViewForm";
             this.Text = "DataGridViewForm";
