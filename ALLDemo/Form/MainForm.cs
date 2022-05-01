@@ -60,5 +60,10 @@ namespace ALLDemo
             ChartTestForm form = new ChartTestForm();
             form.ShowDialog();
         }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DateTestForm form = new DateTestForm();
+            form.ShowDialog();
+        }
     }
 }
