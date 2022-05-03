@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Form\FileTestForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\FileTestForm.Designer.cs">
+      <DependentUpon>FileTestForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form\DateTestForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form\DateTestForm.resx">
       <DependentUpon>DateTestForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\FileTestForm.resx">
+      <DependentUpon>FileTestForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

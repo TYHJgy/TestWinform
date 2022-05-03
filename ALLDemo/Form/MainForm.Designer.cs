@@ -35,6 +35,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,10 +47,11 @@
             this.flowLayoutPanel1.Controls.Add(this.button2);
             this.flowLayoutPanel1.Controls.Add(this.button3);
             this.flowLayoutPanel1.Controls.Add(this.button4);
+            this.flowLayoutPanel1.Controls.Add(this.button5);
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1015, 575);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1117, 575);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // DataGridView_Test
@@ -57,7 +59,7 @@
             this.DataGridView_Test.AutoSize = true;
             this.DataGridView_Test.Location = new System.Drawing.Point(3, 3);
             this.DataGridView_Test.Name = "DataGridView_Test";
-            this.DataGridView_Test.Size = new System.Drawing.Size(153, 25);
+            this.DataGridView_Test.Size = new System.Drawing.Size(180, 40);
             this.DataGridView_Test.TabIndex = 0;
             this.DataGridView_Test.Text = "DataGridView_Test";
             this.DataGridView_Test.UseVisualStyleBackColor = true;
@@ -66,9 +68,9 @@
             // TabControl_Test
             // 
             this.TabControl_Test.AutoSize = true;
-            this.TabControl_Test.Location = new System.Drawing.Point(162, 3);
+            this.TabControl_Test.Location = new System.Drawing.Point(189, 3);
             this.TabControl_Test.Name = "TabControl_Test";
-            this.TabControl_Test.Size = new System.Drawing.Size(153, 25);
+            this.TabControl_Test.Size = new System.Drawing.Size(180, 40);
             this.TabControl_Test.TabIndex = 0;
             this.TabControl_Test.Text = "TabControl_Test";
             this.TabControl_Test.UseVisualStyleBackColor = true;
@@ -76,9 +78,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(321, 3);
+            this.button1.Location = new System.Drawing.Point(375, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(129, 23);
+            this.button1.Size = new System.Drawing.Size(180, 40);
             this.button1.TabIndex = 1;
             this.button1.Text = "Serial_test";
             this.button1.UseVisualStyleBackColor = true;
@@ -86,9 +88,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(456, 3);
+            this.button2.Location = new System.Drawing.Point(561, 3);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(122, 23);
+            this.button2.Size = new System.Drawing.Size(180, 40);
             this.button2.TabIndex = 2;
             this.button2.Text = "Socket_test";
             this.button2.UseVisualStyleBackColor = true;
@@ -96,9 +98,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(584, 3);
+            this.button3.Location = new System.Drawing.Point(747, 3);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(141, 23);
+            this.button3.Size = new System.Drawing.Size(180, 40);
             this.button3.TabIndex = 3;
             this.button3.Text = "chart_test";
             this.button3.UseVisualStyleBackColor = true;
@@ -106,19 +108,29 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(731, 3);
+            this.button4.Location = new System.Drawing.Point(933, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(141, 23);
+            this.button4.Size = new System.Drawing.Size(180, 40);
             this.button4.TabIndex = 4;
             this.button4.Text = "date_test";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(3, 49);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(180, 40);
+            this.button5.TabIndex = 5;
+            this.button5.Text = "file_test";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1015, 575);
+            this.ClientSize = new System.Drawing.Size(1117, 575);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "MainForm";
             this.Text = "MainForm";
@@ -137,5 +149,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }

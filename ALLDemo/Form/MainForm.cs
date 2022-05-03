@@ -65,5 +65,11 @@ namespace ALLDemo
             DateTestForm form = new DateTestForm();
             form.ShowDialog();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FileTestForm form = new FileTestForm();
+            form.ShowDialog();
+        }
     }
 }
