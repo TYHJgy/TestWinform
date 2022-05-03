@@ -71,5 +71,11 @@ namespace ALLDemo
             FileTestForm form = new FileTestForm();
             form.ShowDialog();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            LayoutDemoForm form = new LayoutDemoForm();
+            form.ShowDialog();
+        }
     }
 }
