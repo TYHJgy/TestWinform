@@ -60,14 +60,33 @@ namespace ALLDemo
                     //发送数据
                     while (true)
                     {
-                        byte[] buffer1 = genSMVdata();
-                        //byte[] buffer1 = Encoding.Default.GetBytes("我是服务端循环发送！");
+                        Int16 idata = 0;
+                        Random rd = new Random();
+                        idata = (Int16)rd.Next(0, 0xFFFF);
+                        //查询时间常数
+                        byte[] buffer1 = genSMVPIDdata("0xA2", 0, 0, 0x4);
                         ClientSocket.Send(buffer1);
-                        Thread.Sleep(2000);
-                        Console.WriteLine(ClientSocket);
+                        Thread.Sleep(200);
+                        //查询其他参数
+                        for (byte d = 1; d < 5; d++)
+                        {
+                            for (byte index = 0; index < 6; index++)
+                            {
+                                idata = (Int16)rd.Next(0, 0x4);
+                                buffer1 = genSMVPIDdata("0xA2", d, index, 0x4);
+                                ClientSocket.Send(buffer1);
+                                Thread.Sleep(200);
+                                Console.WriteLine(ClientSocket);
+                            }
+                        }
+                        //byte[] buffer1 = genSMVdata();
+                        ////byte[] buffer1 = Encoding.Default.GetBytes("我是服务端循环发送！");
+                        //ClientSocket.Send(buffer1);
+                        //Thread.Sleep(2000);
+                        //Console.WriteLine(ClientSocket);
                     }
                 }
-                catch (Exception ex)
+                catch (Exception)
                 {
                     Console.WriteLine("出现异常");
                     //listenThread.Abort(ex.Message);
@@ -75,7 +94,70 @@ namespace ALLDemo
             }
         }
         //生成SMV模拟数据
-        private byte[] genSMVdata() {
+        private byte[] genSMVPIDdata(string cmd, byte d, byte index, Int16 idata)
+        {
+            
+            //Random rd = new Random();
+            byte[] buffer1 = new byte[14];
+            buffer1[0] = 0xAA;//帧头
+            buffer1[1] = 0x55;//帧头            
+            buffer1[2] = 0x0E;//帧长度
+            buffer1[3] = 0x46;//识别码
+            buffer1[4] = 0x5F;//发送帧计数，帧计数值M，从255~1，循环递减计数。
+            buffer1[5] = 0xCD;//接收帧计数，SMV收到上位机CAN的帧计数值，回传，未收到时为0；
+
+            buffer1[6] = 0xA2; //表示查询下位机参数
+
+            buffer1[7] = d;         //表示第X段控制参数
+            buffer1[8] = index;     //表示第X段的第Y个控制参数，与CD0联合使用
+
+            buffer1[9] = (byte)(idata >> 8);          //参数高8位
+            buffer1[10] = (byte)(idata & 0x00FF);   //参数低8位
+
+            buffer1[11] = 0xFF; //默认0xFF
+            buffer1[12] = 0xFF; //默认0xFF
+
+            //异或
+            byte temp = (byte)(buffer1[0] ^ buffer1[1]);
+            for (int i = 2; i < buffer1.Length - 1; i++)
+            {
+                temp ^= buffer1[i];
+            }
+
+            Console.WriteLine("发送帧取反前temp:" + Convert.ToString(temp, 2).PadLeft(8, '0'));
+            //取反
+            temp = (byte)~temp;
+            Console.WriteLine("发送帧取反后temp:" + Convert.ToString(temp, 2).PadLeft(8, '0'));
+            buffer1[13] = temp;//校验码
+
+
+            //以太网数据组织
+            //0x08  0x00  0x00  0x00  0x32 
+            byte[] buffer2 = new byte[14 + 12];
+            buffer2[0] = 0x08;
+            buffer2[1] = 0x00;
+            buffer2[2] = 0x00;
+            buffer2[3] = 0x00;
+            buffer2[4] = 0x19;
+            Array.Copy(buffer1, 0, buffer2, 5, 8);
+            buffer2[13] = 0x06;
+            buffer2[14] = 0x00;
+            buffer2[15] = 0x00;
+            buffer2[16] = 0x00;
+            buffer2[17] = 0x19;
+            Array.Copy(buffer1, 8, buffer2, 18, 6);
+
+            Console.Write("发送帧");
+            for (int i = 0; i < buffer2.Length; i++)
+            {
+                Console.Write("0x" + string.Format("{0:X2} ", buffer2[i]) + " ");
+            }
+            Console.WriteLine("");
+            return buffer2;
+        }
+        //生成SMV模拟数据
+        private byte[] genSMVdata()
+        {
             Random rd = new Random();
             byte[] buffer1 = new byte[38];
             buffer1[0] = 0xAA;//帧头
@@ -135,6 +217,7 @@ namespace ALLDemo
             buffer1[37] = temp;//校验码
             return buffer1;
         }
+
         //生成smv模拟数据-维护模式
         private byte[] genSMVdata2()
         {

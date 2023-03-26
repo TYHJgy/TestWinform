@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MysqlOperation", "MysqlOper
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MNsmv", "MNsmv\MNsmv.csproj", "{EF3277BE-A66F-4B00-88F9-2AF14436F5FA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YouDaoUI", "YouDaoUI\YouDaoUI.csproj", "{6C06C912-D29C-4691-87F9-50E960C45C13}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{EF3277BE-A66F-4B00-88F9-2AF14436F5FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF3277BE-A66F-4B00-88F9-2AF14436F5FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF3277BE-A66F-4B00-88F9-2AF14436F5FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C06C912-D29C-4691-87F9-50E960C45C13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C06C912-D29C-4691-87F9-50E960C45C13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C06C912-D29C-4691-87F9-50E960C45C13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C06C912-D29C-4691-87F9-50E960C45C13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

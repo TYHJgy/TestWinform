@@ -165,21 +165,31 @@ namespace ALLDemo
 
         private void button12_Click(object sender, EventArgs e)
         {
-            string info;
-            //源码的源文件名
-            info = new StackTrace(new StackFrame(true)).GetFrame(0).GetFileName()+ "\r\n\r\n";
-            //源码的哪一行
-            info = info + new StackTrace(new StackFrame(true)).GetFrame(0).GetFileLineNumber().ToString() + "\r\n\r\n";
-            //源码的哪一个方法
-            info = info + new StackTrace(new StackFrame(true)).GetFrame(0).GetMethod() + "\r\n\r\n";
-            //源码的哪一个方法
-            info = info + new StackTrace(new StackFrame(true)).GetFrame(0).GetMethod().Name + "\r\n\r\n";
-            //所有信息
-            info = info + (new StackTrace(new StackFrame(true)).GetFrame(0));
 
-            textBox1.Text = info;
+            //string info;
+
+            ////源码的源文件名
+            //info = new StackTrace(new StackFrame(true)).GetFrame(0).GetFileName()+ "\r\n\r\n";
+            ////源码的哪一行
+            //info = info + new StackTrace(new StackFrame(true)).GetFrame(0).GetFileLineNumber().ToString() + "\r\n\r\n";
+            ////源码的哪一个方法
+            //info = info + new StackTrace(new StackFrame(true)).GetFrame(0).GetMethod() + "\r\n\r\n";
+            ////源码的哪一个方法
+            //info = info + new StackTrace(new StackFrame(true)).GetFrame(0).GetMethod().Name + "\r\n\r\n";
+            ////所有信息
+            //info = info + (new StackTrace(new StackFrame(true)).GetFrame(0));
+
+            //textBox1.Text = info;
+            test();
         }
-
+        private void test() {
+            string info;
+            //StackTrace st = new StackTrace(new StackFrame(true));
+            StackTrace st = new StackTrace(true);
+            info = st.GetFrame(1).ToString()+ "\r\n\r\n";
+            info = info + st.GetFrame(1).GetFileLineNumber().ToString();
+            textBox2.Text = info;
+        }
         //读取日志信息
         private void button9_Click(object sender, EventArgs e)
         {

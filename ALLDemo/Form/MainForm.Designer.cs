@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.DataGridView_Test = new System.Windows.Forms.Button();
             this.TabControl_Test = new System.Windows.Forms.Button();
@@ -37,6 +38,7 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.flowLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +55,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1117, 575);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1021, 594);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // DataGridView_Test
@@ -110,7 +112,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(933, 3);
+            this.button4.Location = new System.Drawing.Point(3, 49);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(180, 40);
             this.button4.TabIndex = 4;
@@ -120,7 +122,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(3, 49);
+            this.button5.Location = new System.Drawing.Point(189, 49);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(180, 40);
             this.button5.TabIndex = 5;
@@ -130,7 +132,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(189, 49);
+            this.button6.Location = new System.Drawing.Point(375, 49);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(180, 40);
             this.button6.TabIndex = 6;
@@ -142,7 +144,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1117, 575);
+            this.ClientSize = new System.Drawing.Size(1021, 594);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Name = "MainForm";
             this.Text = "MainForm";
@@ -163,5 +165,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
+        private System.IO.Ports.SerialPort serialPort1;
     }
 }

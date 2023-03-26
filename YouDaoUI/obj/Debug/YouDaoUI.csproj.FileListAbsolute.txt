@@ -1,0 +1,12 @@
+D:\02_study\project\winform\TestWinform\YouDaoUI\bin\Debug\YouDaoUI.exe.config
+D:\02_study\project\winform\TestWinform\YouDaoUI\bin\Debug\YouDaoUI.exe
+D:\02_study\project\winform\TestWinform\YouDaoUI\bin\Debug\YouDaoUI.pdb
+D:\02_study\project\winform\TestWinform\YouDaoUI\bin\Debug\Guna.UI2.dll
+D:\02_study\project\winform\TestWinform\YouDaoUI\obj\Debug\YouDaoUI.csprojAssemblyReference.cache
+D:\02_study\project\winform\TestWinform\YouDaoUI\obj\Debug\YouDaoUI.Form1.resources
+D:\02_study\project\winform\TestWinform\YouDaoUI\obj\Debug\YouDaoUI.Properties.Resources.resources
+D:\02_study\project\winform\TestWinform\YouDaoUI\obj\Debug\YouDaoUI.csproj.GenerateResource.cache
+D:\02_study\project\winform\TestWinform\YouDaoUI\obj\Debug\YouDaoUI.csproj.CoreCompileInputs.cache
+D:\02_study\project\winform\TestWinform\YouDaoUI\obj\Debug\YouDaoUI.csproj.CopyComplete
+D:\02_study\project\winform\TestWinform\YouDaoUI\obj\Debug\YouDaoUI.exe
+D:\02_study\project\winform\TestWinform\YouDaoUI\obj\Debug\YouDaoUI.pdb
